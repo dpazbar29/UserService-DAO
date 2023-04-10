@@ -1,7 +1,6 @@
 package dao
 
 import dao.entity.UserEntity
-import java.sql.SQLException
 import java.util.*
 import javax.sql.DataSource
 

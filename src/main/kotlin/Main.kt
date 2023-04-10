@@ -1,8 +1,6 @@
 import dao.UserDAOH2
-import services.UserServiceImpl
-import com.zaxxer.hikari.HikariConfig
-import com.zaxxer.hikari.HikariDataSource
 import dao.entity.UserEntity
+import services.UserServiceImpl
 import sql.utils.DataSourceFactory
 
 fun main() {

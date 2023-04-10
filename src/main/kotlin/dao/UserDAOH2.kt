@@ -14,8 +14,6 @@ class UserDAOH2(private val dataSource: DataSource) : UserDAO {
                 stmt.setString(1, user.id.toString())
                 stmt.setString(2, user.name)
                 stmt.setString(3, user.email)
-                if (stmt.executeUpdate() == 0)
-                    user
                 user
             }
         }

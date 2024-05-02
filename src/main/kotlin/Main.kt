@@ -7,6 +7,17 @@ fun main() {
     // Creamos la instancia de la base de datos
     val dataSource = DataSourceFactory.getDS(DataSourceFactory.DataSourceType.HIKARI)
 
+    val connection = dataSource.connection
+
+    val query = connection.prepareStatement("CREATE TABLE tuser(\n" +
+            "                      id VARCHAR(36) PRIMARY KEY,\n" +
+            "                      name VARCHAR(255),\n" +
+            "                      email VARCHAR(255)\n" +
+            ");")
+
+    // the query is executed and results are fetched
+    query.executeUpdate()
+
     // Creamos la instancia de UserDAO
     val userDao = UserDAOH2(dataSource)
 
